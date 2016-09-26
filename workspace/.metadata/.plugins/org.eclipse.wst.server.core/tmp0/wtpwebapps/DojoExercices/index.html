@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>New Worker</title>
+		<script type="text/JavaScript" src="js/dojo/dojo.js" djConfig="parseOnLoad: true">
+		</script>
+		<style type="text/css">
+			@import "js/dijit/themes/tundra/tundra.css";
+			@import "js/dojo/resources/dojo.css";
+		</style>
+		<script type="text/JavaScript">
+				dojo.require("dijit.form.Button");
+		</script>
+	</head>
+
+	<body class="tundra">
+
+		<!-- Definição de Objeto, método, instanciar objeto e executar função do objeto definido -->
+		<script type="text/JavaScript">
+
+		dojo.declare("custom.javaworld.Worker",null,{
+			firstName: "",
+			lastName: "",
+
+			constructor: function(){
+				console.log("executing constructor");
+				this.firstName = "Vinicius";
+				this.lastName = "Santos"; 
+			},
+
+			work: function(){
+				console.log("Working");
+			},
+
+			updateValue: function(inFirstName, inLastName){
+				console.log("Update Value Start");
+				console.log(inFirstName + " " + inLastName) ;
+				this.firstName = inFirstName;
+				this.lastName = inLastName; 	
+			}
+		});
+
+		var newWorker = new custom.javaworld.Worker();
+
+		</script>
+
+
+		<label for="firstName">First Name:</label>
+		<input type="text" name="firstName" value=""
+			data-dojo-type="dijit/form/TextBox"
+			data-dojo-props="trim:true" id="firstName" />
+		<br>
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" name="lastName" value=""
+			data-dojo-type="dijit/form/TextBox"
+			data-dojo-props="trim:true" id="lastName" />
+		<br>
+		
+		<div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'firstName',position:['below']">
+    		First name of worker
+		</div>
+		
+		<div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'lastName',position:['below']">
+    		Last name of worker
+		</div>
+		
+
+		<button dojoType="dijit.form.Button" id="updateData">
+			Update Data
+		   <script type="dojo/method" event="onClick">
+			   newWorker.updateValue(document.getElementById("firstName").value, document.getElementById("lastName").value);
+		   </script>
+		</button>
+	</body>
+</html>

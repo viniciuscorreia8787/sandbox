@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="js/dojox/mobile/themes/custom/custom.css"></link>
+		<script src="js/dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+		<script>
+			require([
+			"dojox/mobile/parser",    // This mobile app uses declarative programming with fast mobile parser
+			"dojox/mobile",           // This is a mobile app.
+			]); // Skip module alias and function block because we're not doing anything special...
+		</script>
+	</head>
+	<body>
+		<div id="foo" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading">View 1</h1>
+			<ul data-dojo-type="dojox/mobile/RoundRectList">
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bar1',label:'Hello 1',icon:"mblDomButtonRedCircleMinus","></li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bar2',label:'Hello 2'"></li>
+			</ul>
+		</div>		
+
+		<div id="bar1" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'foo'">View 2</h1>
+			<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'"></li>
+			</ul>
+		</div>
+		
+		<div id="bar2" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'foo'">View 3</h1>
+			<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'"></li>
+			</ul>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" data-dojo-type="text/css" href="js/dojox/mobile/themes/custom/custom.css"></link>
+		<script src="js/dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+		<script>
+			require([
+			"dojox/mobile/parser",    // This mobile app uses declarative programming with fast mobile parser
+			"dojox/mobile",           // This is a mobile app.
+			]); // Skip module alias and function block because we're not doing anything special...
+			
+		</script>
+	</head>
+	<body>
+		<div id="foo" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading">View 1</h1>
+			<ul data-dojo-type="dojox/mobile/RoundRectList">
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bar1',label:'Hello 1',icon:'mblDomButtonRedCircleMinu'"></li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bar2',label:'Hello 2'"></li>
+			</ul>
+		</div>		
+
+		<div id="bar1" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'foo'">View 2</h1>
+			<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'data-dojo-type"></li>
+			</ul>
+		</div>
+
+
+
+
+		
+		<div id="bar2" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'foo'">View 2</h1>
+
+<!-- 	
+
+<div id="forms" data-dojo-type="dojox.mobile.ScrollableView"
+	style="width: 100%;">
+	
+	
+	<form name="testForm" id="testForm">
+		<div class="section-title">Personal Data</div>
+		<div data-dojo-type="dojox/mobile/RoundRect">
+			<div data-dojo-type="dojox/mobile/FormLayout">
+				<div>
+					<label>Full name</label>
+					<fieldset>
+						<input id="forms_name" data-dojo-type="dojox.mobile.TextBox" value="Luke" name="name">
+					</fieldset>
+				</div>
+				<div>
+					<label>Hide birthdate</label>
+					<fieldset>
+						<input data-dojo-type="dojox.mobile.CheckBox" name="hidebirth">
+					</fieldset>
+				</div>
+				<div>
+					<label>Goals</label>
+					<fieldset>
+						<textarea name="goals" data-dojo-type="dojox.mobile.TextArea" maxLength="100" cols="20"></textarea>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		
+ -->
+
+<!-- 
+
+		<div class="section-title">
+			Login
+		</div>
+		<div data-dojo-type="dojox/mobile/RoundRect">
+			<div data-dojo-type="dojox/mobile/FormLayout">
+				<div>
+					<label>User name*</label>
+					<fieldset>
+						<input data-dojo-type="dojox.mobile.TextBox" name="username" >
+						</input>
+					</fieldset>
+				</div>
+				<div>
+					<label>Password*</label>
+					<fieldset>
+						<input name="pass" data-dojo-type="dojox.mobile.TextBox">
+						</input>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<div class="section-title">
+			Alerts
+		</div>
+		<div data-dojo-type="dojox/mobile/RoundRect">
+			<div data-dojo-type="dojox/mobile/FormLayout">
+				<div>
+					<label>Issue alerts for:</label>
+					<fielset></fielset>
+				</div>
+				<div>
+					<label>All messages</label>
+					<fieldset>
+						<input id="alert-all" name="forwardtype" data-dojo-type="dojox.mobile.RadioButton" value="all">
+						</input>
+					</fieldset>
+				</div>
+				<div>
+					<label>Urgent messages only</label>
+					<fielset>
+						<input id="alert-urgent" name="forwardtype" data-dojo-type="dojox.mobile.RadioButton" checked="true" value="urgent">
+						</input>
+					</fielset>
+				</div>
+				<div>
+					<label>Audible alerts:</label>
+					<fieldset>
+						<div id="alertSwitch" data-dojo-type="dojox.mobile.Switch" value="off">
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<label>Alert volume</label>
+					<fieldset>
+						<input id="alertSlider" data-dojo-type="dojox.mobile.Slider" name="alertvolume" min="0" max="100" value="0" style="width:50%;">
+						</input>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center;">
+			<button id="resetBtn" data-dojo-type="dojox.mobile.Button" class="mblButton greyBtn baseBtn normalBtn">
+				Reset Form
+			</button>
+		</div>
+ 
+
+	</form>
+
+
+</div>
+-->
+
+		</div>
+	</body>
+</html>
